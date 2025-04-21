@@ -14,7 +14,7 @@
   <script>
     async function callSayHello() {
       const name = document.getElementById("nameInput").value;
-      const url = "http://localhost:8000/wsdl";
+      const url = "https://soap-service-b21p.onrender.com/wsdl";
 
       const soapEnvelope = `
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
@@ -41,7 +41,6 @@
         const text = await res.text();
         console.log("Raw SOAP Response:", text);
 
-        // Extract <greeting> from the response using RegEx
         const match = text.match(/<greeting>(.*)<\/greeting>/);
         const greeting = match ? match[1] : "No greeting found";
 
