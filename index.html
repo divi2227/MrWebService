@@ -14,7 +14,7 @@
   <script>
     async function callSayHello() {
       const name = document.getElementById("nameInput").value;
-      const url = "https://soap-service-b21p.onrender.com/wsdl";
+      const url = "http://localhost:8000/wsdl";
 
       const soapEnvelope = `
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
